@@ -4,7 +4,7 @@ files:
   - source: /index.html
     destination: /var/www/html/index.html
 hooks:
-  ApplicationStart:
-    - location: /root/Scripts/restart_httpd.sh
+  ApplicationRestart:
+    - location: Scripts/restart_httpd.sh
       timeout: 300
       runas: root
