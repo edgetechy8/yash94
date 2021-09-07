@@ -1,8 +1,8 @@
 version: 0.0
 os: linux
 files:
-  - source: /
-    destination: /var/www/html/index.html
+  - source: /index.html
+    destination: /var/www/html/
 hooks:
   ApplicationRestart:
     - location: Scripts/restart_httpd.sh
