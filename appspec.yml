@@ -1,10 +1,10 @@
 version: 0.0
 os: linux
 files:
-  - source: /
-    destination: /var/www/html/
+  - source: /index.html
+    destination: /var/www/html/index.html
 hooks:
   ApplicationStart:
-    - location: /scripts/restart_httpd.sh
+    - location: /root/Scripts/restart_httpd.sh
       timeout: 300
       runas: root
