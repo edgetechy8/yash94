@@ -7,6 +7,6 @@ files:
     destination: scripts/
 hooks:
   ApplicationStart:
-    - location: /restart_httpd.sh
+    - location: scripts/restart_httpd.sh
       timeout: 300
       runas: root
