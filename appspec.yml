@@ -4,7 +4,7 @@ files:
   - source: /index.html
     destination: /var/www/html/
   - source: /restart_httpd.sh
-    destination: Scripts/
+    destination: scripts/
 hooks:
   ApplicationStart:
     - location: /restart_httpd.sh
