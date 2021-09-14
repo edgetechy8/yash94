@@ -3,8 +3,13 @@ os: linux
 files:
   - source: /index.html
     destination: /var/www/html/
+  - source: /play55_test.conf
+    destination: /etc/httpd/conf.d/
 hooks:
   ApplicationStart:
+    - location: test-ssl-create.sh
+      timeout: 300
+      runas: root  
     - location: restart_httpd.sh
       timeout: 300
       runas: root
