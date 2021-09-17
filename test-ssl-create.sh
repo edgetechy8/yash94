@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Script accepts a single argument, the fqdn for the cert
-DOMAIN="test_bet99"
+DOMAIN="play99_bet.com"
 if [ -z "$DOMAIN" ]; then
   echo "Usage: $(basename $0) <domain>"
   exit 11
@@ -59,6 +59,6 @@ mv $DOMAIN.crt /etc/pki/tls/certs/
 
 # change old domain name to new from the /etc/httpd/conf.d/play55_test.conf file
 
-sed -i 's/13.229.59.17/test_bet99/g' /etc/httpd/conf.d/play55_test.conf
+sed -i 's/13.229.59.17/play99_bet.com/g' /etc/httpd/conf.d/play55_test.conf
 
 sudo mount -t nfs4 -o nfsvers=4.1,rsize=1048576,wsize=1048576,hard,timeo=600,retrans=2,noresvport fs-de64dc9e.efs.ap-southeast-1.amazonaws.com:/ ~/efs-mount-point/
